@@ -1,8 +1,11 @@
 import fetch from "node-fetch";
 import express from "express";
 import bodyParser from "body-parser";
-import errorHandler from "./helpers/error-handler.js";
+import errorHandler from "./helpers/error-handler";
 import cors from "cors";
+
+import ResJsonCreator from "./helpers/resJson";
+import PsnApiRouter from "./routers/psn/index";
 
 const app = express();
 
@@ -13,16 +16,10 @@ app.use(bodyParser.json());
 app.use(cors());
 
 app.get("/",function(req,res,next){
-    res.json(
-        {
-            code:200,
-            result:"success",
-            data:{
-                msg:"welcome to azimiao's api server(node)"
-            }
-        });
+    res.json(ResJsonCreator(200,1,"welcome to azimiao's api server(node)",null));
 });
 
+app.use("/psn",PsnApiRouter);
 
 //访问其他未监听的目录，暂时 404 处理
 app.get("*",function(req,res,next){

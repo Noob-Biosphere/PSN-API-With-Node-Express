@@ -15,6 +15,6 @@
     "psn-api": "^2.7.0"
   },
   "scripts": {
-    "start": "node ./index.js"
+    "start": "node  --experimental-specifier-resolution=node ./index.js"
   }
 }
