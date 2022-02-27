@@ -2,10 +2,9 @@
   "name": "PSN-API",
   "version": "1.0.0",
   "description": "a simple psn-api backend program by azimiao.com",
-  "main": "index.js",
-  "author": "admin@azimiao.com",
   "type": "module",
-  "homepage": ".",
+  "main": "./index.js",
+  "author": "admin@azimiao.com",
   "license": "GPL-3.0-or-later",
   "dependencies": {
     "body-parser": "^1.19.2",
@@ -15,6 +14,10 @@
     "psn-api": "^2.7.0"
   },
   "scripts": {
-    "start": "node  --experimental-specifier-resolution=node ./index.js"
+    "start": "node  --experimental-modules  --experimental-specifier-resolution=node ./index.js",
+    "build": "node ./build.js"
+  },
+  "devDependencies": {
+    "fs": "^0.0.1-security"
   }
 }
