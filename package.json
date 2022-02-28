@@ -11,7 +11,7 @@
     "cors": "^2.8.5",
     "express": "^4.17.3",
     "node-fetch": "^3.2.0",
-    "psn-api": "^2.7.0"
+    "psn-api": "git+https://github.com/Noob-Biosphere/psn-api.git"
   },
   "scripts": {
     "start": "node  --experimental-modules  --experimental-specifier-resolution=node ./index.js",
