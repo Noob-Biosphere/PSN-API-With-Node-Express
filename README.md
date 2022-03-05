@@ -13,6 +13,18 @@ yarn build
 yarn start
 # now run at localhost:81
 ```
+## Docker
+
+```bash
+# clone
+git clone https://github.com/Noob-Biosphere/PSN-API-With-Node-Express.git
+# enter dir
+cd PSN-API-With-Node-Express
+# docker build
+sudo docker build -t psn-api .
+# run
+sudo docker run -itd --name psn-api -p 4000:4000 psn-api
+```
 
 ## API
 
