@@ -13,6 +13,14 @@ yarn build
 yarn start
 # now run at localhost:4000
 ```
+## DockerHub
+
+大概只能用在 X86 平台？
+
+```bash
+sudo docker run -itd --name psn-api -p 4000:4000 azimiao/psn-api
+```
+
 ## Docker
 
 ```bash
