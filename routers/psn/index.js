@@ -31,7 +31,7 @@ router.get("/",function(req,res,next){
 
 router.get("/token",function(req,res,next){
     if(req.query.hasOwnProperty("npsso")){
-        console.log(req.query);
+        // console.log(req.query);
     }else{
         let k = new Error("must have a npsso query params");
         next(k);
@@ -89,7 +89,7 @@ router.post("/trophy",function(req,res,next){
         if(req.query.hasOwnProperty("limit")){
             try{
                 limit =  parseInt(req.query.limit);
-                console.log(limit);
+                // console.log(limit);
             }catch(err){
                 next(err);
                 return;
