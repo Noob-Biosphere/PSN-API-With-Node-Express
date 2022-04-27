@@ -102,7 +102,7 @@ router.post("/trophy",function(req,res,next){
             {
                 offset: offset >= 0 ? offset:0,
                 limit: limit > 0 ? limit:1,
-                headerOverrides:{ "Accept-Language":"zh-cn"}
+                headerOverrides:{ "Accept-Language":"zh-Hant"}
             }
         ).then((data)=>{
 
