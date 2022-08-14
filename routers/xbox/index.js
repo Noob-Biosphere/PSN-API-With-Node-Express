@@ -15,23 +15,23 @@ router.get("/",function(req,res,next){
 });
 
 const gameJsonPath = __dirname + "/xboxjson/";
-const game13Origin = "https://raw.githubusercontent.com/Gamr13/AppStore/main/gamr13.json";
-
-router.get("/game13list",function(req,res,next){
+const gamr13Origin = "https://raw.githubusercontent.com/Gamr13/AppStore/main/gamr13.json";
+const copyright = "data from gamr13(https://www.patreon.com/gamr13)";
+router.get("/gamr13list",function(req,res,next){
     
     if(!fs.existsSync(gameJsonPath)){
         fs.mkdirSync(gameJsonPath);
     }
 
     let todayDate = new Date();
-    let todayStr = todayDate.getFullYear() + "_" + (todayDate.getMonth() + 1) + todayDate.getDate();
-    let todayJson = gameJsonPath + "game13today_" + todayStr;
+    let todayStr = todayDate.getFullYear() + "_" + (todayDate.getMonth() + 1) + "_" + todayDate.getDate();
+    let todayJson = gameJsonPath + "gamr13_" + todayStr;
 
     let result = fs.existsSync(todayJson);
-    
+
     if(result){
         let str = fs.readFileSync(todayJson,"utf-8");
-        res.status(200).json(GetSendJson(200,1,"",str));
+        res.status(200).json(GetSendJson(200,1,copyright,str));
     }else{
         let hasOldData = fs.readdirSync(gameJsonPath);
         if(hasOldData != null && hasOldData.length > 0){
@@ -41,12 +41,12 @@ router.get("/game13list",function(req,res,next){
             });
         }
        
-        fetch(game13Origin).then(resTxt=>resTxt.json()).then(jsonData=>{
+        fetch(gamr13Origin).then(resTxt=>resTxt.json()).then(jsonData=>{
 
             try{
                 let str = JSON.stringify(jsonData);
                 fs.writeFileSync(todayJson,str);
-                res.status(200).json(GetSendJson(200,1,"",str));
+                res.status(200).json(GetSendJson(200,1,copyright,str));
             }catch(e){
                 throw e;
             }
