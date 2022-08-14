@@ -6,7 +6,7 @@ import cors from "cors";
 
 import ResJsonCreator from "./helpers/resJson";
 import PsnApiRouter from "./routers/psn/index";
-
+import XboxApiRouter from "./routers/xbox/index";
 const app = express();
 
 app.use(bodyParser.urlencoded({ extended:false}));
@@ -20,6 +20,8 @@ app.get("/",function(req,res,next){
 });
 
 app.use("/psn",PsnApiRouter);
+
+app.use("/xbox",XboxApiRouter);
 
 //访问其他未监听的目录，暂时 404 处理
 app.get("*",function(req,res,next){

@@ -10,6 +10,7 @@
     "body-parser": "^1.19.2",
     "cors": "^2.8.5",
     "express": "^4.17.3",
+    "fs": "^0.0.1-security",
     "node-fetch": "^3.2.0",
     "psn-api": "git+https://github.com/Noob-Biosphere/psn-api.git"
   },
@@ -17,7 +18,5 @@
     "start": "node  --experimental-modules  --experimental-specifier-resolution=node ./index.js",
     "build": "node ./build.js"
   },
-  "devDependencies": {
-    "fs": "^0.0.1-security"
-  }
+  "devDependencies": {}
 }
