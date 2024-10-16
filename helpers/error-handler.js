@@ -1,4 +1,4 @@
-import GetResJson from "./resJson";
+import GetResJson from "./resJson.js";
 function errorHandler(err, req, res, next) {
 
 
@@ -25,13 +25,3 @@ function errorHandler(err, req, res, next) {
 }
 
 export default errorHandler;
-
-/*
-{
-    code:500,
-    result:success,
-    data:{
-
-    }
-}
-*/

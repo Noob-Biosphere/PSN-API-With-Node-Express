@@ -321,9 +321,10 @@ proxy-addr@~2.0.7:
     forwarded "0.2.0"
     ipaddr.js "1.9.1"
 
-"psn-api@git+https://github.com/Noob-Biosphere/psn-api.git":
-  version "0.0.0-development"
-  resolved "git+https://github.com/Noob-Biosphere/psn-api.git#ca5403c991ea5d12e4701a9044c4f91f995dcc55"
+psn-api@^2.10.1:
+  version "2.10.1"
+  resolved "https://registry.yarnpkg.com/psn-api/-/psn-api-2.10.1.tgz#1e205197ba7a1b0c4803308fbc8f9151cef7f095"
+  integrity sha512-E0Fbn8om2lZDuQr55DRN/50yWYG4lSFP3SGMlquYNK5x9nz945M+e8fH7g7+HYqIRfMkyucb9V7kZBzsT8bw4Q==
   dependencies:
     isomorphic-unfetch "^3.1.0"
 

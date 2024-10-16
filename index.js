@@ -1,12 +1,12 @@
 import fetch from "node-fetch";
 import express from "express";
 import bodyParser from "body-parser";
-import errorHandler from "./helpers/error-handler";
+import errorHandler from "./helpers/error-handler.js";
 import cors from "cors";
 
-import ResJsonCreator from "./helpers/resJson";
-import PsnApiRouter from "./routers/psn/index";
-import XboxApiRouter from "./routers/xbox/index";
+import ResJsonCreator from "./helpers/resJson.js";
+import PsnApiRouter from "./routers/psn/index.js";
+import XboxApiRouter from "./routers/xbox/index.js";
 const app = express();
 
 app.use(bodyParser.urlencoded({ extended:false}));

@@ -2,8 +2,8 @@
   "name": "PSN-API",
   "version": "1.0.0",
   "description": "a simple psn-api backend program by azimiao.com",
-  "type": "module",
   "main": "./index.js",
+  "type": "module",
   "author": "admin@azimiao.com",
   "license": "GPL-3.0-or-later",
   "dependencies": {
@@ -12,7 +12,7 @@
     "express": "^4.17.3",
     "fs": "^0.0.1-security",
     "node-fetch": "^3.2.0",
-    "psn-api": "git+https://github.com/Noob-Biosphere/psn-api.git"
+    "psn-api": "^2.10.1"
   },
   "scripts": {
     "start": "node  --experimental-modules  --experimental-specifier-resolution=node ./index.js",

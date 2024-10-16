@@ -1,5 +1,5 @@
 import express from "express";
-import GetSendJson from "../../helpers/resJson";
+import GetSendJson from "../../helpers/resJson.js";
 import fetch from "node-fetch";
 import * as fs from "fs";
 import path from "path";

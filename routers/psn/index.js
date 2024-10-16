@@ -1,15 +1,18 @@
 //PSN 的相关接口 API，base url: /psn
 
 import express from "express";
-import GetSendJson from "../../helpers/resJson";
+import GetSendJson from "../../helpers/resJson.js";
 
 const router = express.Router();
 
-import * as psnApi from 'psn-api';
-import { getUserTitles } from "psn-api";
+// import * as psnApi from 'psn-api';
 
+
+import Module from 'node:module';
+const require = Module.createRequire(import.meta.url);
+const { exchangeNpssoForCode, exchangeCodeForAccessToken, getUserTitles } = require('psn-api');
 // const psnApi = require("psn-api");
-const { exchangeCodeForAccessToken, exchangeNpssoForCode } = psnApi;
+// const { exchangeCodeForAccessToken, exchangeNpssoForCode,getUserTitles } = psnApi;
 
 /**
  * 
